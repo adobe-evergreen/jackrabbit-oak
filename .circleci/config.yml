@@ -38,6 +38,6 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
         
       # build and test
-      - run: mvn install -PintegrationTesting
+      - run: mvn install
 
 
