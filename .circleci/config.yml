@@ -38,6 +38,6 @@ jobs:
           key: v1-dependencies-{{ checksum "pom.xml" }}
         
       # build and test
-      - run: mvn install -DforkCount=0
+      - run: java -cp target/jackrabbit-oak/oak-benchmarks/target/oak-benchmarks-*.jar org.apache.jackrabbit.oak.run.Main benchmark BasicWriteTest Oak-Segment-Tar
 
 
