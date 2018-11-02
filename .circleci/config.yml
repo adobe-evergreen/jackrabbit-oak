@@ -3,6 +3,15 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
+commands:
+  benchmark_test:
+    description: "An oak benchmark test"
+    parameters:
+      test:
+        type: string
+        default: ""
+    steps:
+      - run: java -cp oak-benchmarks/target/oak-benchmarks-1.10-SNAPSHOT.jar org.apache.jackrabbit.oak.run.Main benchmark << parameters.test >>
 jobs:
   build:
     docker:
@@ -39,7 +48,80 @@ jobs:
         
       - run: pwd && ls
 
-      # build and test
-      - run: java -cp oak-benchmarks/target/oak-benchmarks-1.10-SNAPSHOT.jar org.apache.jackrabbit.oak.run.Main benchmark BasicWriteTest Oak-Segment-Tar
+      # oak benchmark tests
+      - benchmark_test:
+          to: BasicWriteTest 
+      - benchmark_test:  
+          to: LoginTest 
+      - benchmark_test:
+          to: LoginLogoutTest 
+      - benchmark_test:
+          to:  LoginGetRootLogoutTest 
+      - benchmark_test:
+          to:  NamespaceTest 
+      - benchmark_test:
+          to: NamespaceRegistryTest 
+      - benchmark_test:
+          to: ReadPropertyTest 
+      - benchmark_test:
+          to: GetNodeWithAdmin 
+      - benchmark_test:
+          to: GetNodeWithAnonymous 
+      - benchmark_test:
+          to: GetDeepNodeTest 
+      - benchmark_test:
+          to: SetPropertyTest 
+      - benchmark_test:
+          to: SetMultiPropertyTest 
+      - benchmark_test:
+          to: SmallFileReadTest 
+      - benchmark_test:
+          to: SmallFileWriteTest 
+      - benchmark_test:
+          to: ConcurrentReadTest 
+      - benchmark_test:
+          to: ConcurrentReadWriteTest 
+      - benchmark_test:
+          to: ConcurrentWriteReadTest 
+      - benchmark_test:
+          to: ConcurrentWriteTest 
+      - benchmark_test:
+          to: SimpleSearchTest 
+      - benchmark_test:
+          to: UUIDLookupTest 
+      - benchmark_test:
+          to: SQL2SearchTest 
+      - benchmark_test:
+          to: DescendantSearchTest 
+      - benchmark_test:
+          to: SQL2DescendantSearchTest 
+      - benchmark_test:
+          to: FlatTreeUpdateTest 
+      - benchmark_test:
+          to: CreateManyChildNodesTest 
+      - benchmark_test:
+          to: CreateManyNodesTest 
+      - benchmark_test:
+          to: UpdateManyChildNodesTest 
+      - benchmark_test:
+          to: TransientManyChildNodesTest 
+      - benchmark_test:
+          to: WikipediaImport 
+      - benchmark_test:
+          to: ManyNodes 
+      - benchmark_test:
+          to: ReadDeepTreeTest 
+      - benchmark_test:
+          to: ConcurrentReadDeepTreeTest 
+      - benchmark_test:
+          to: ConcurrentReadRandomNodeAndItsPropertiesTest 
+      - benchmark_test:
+          to: ConcurrentTraversalTest 
+      - benchmark_test:
+          to: ConcurrentCreateNodesTest 
+      - benchmark_test:
+          to: SequentialCreateNodesTest 
+      - benchmark_test:
+          to: ConcurrentFileWriteTest
 
 
