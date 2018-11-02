@@ -50,78 +50,78 @@ jobs:
 
       # oak benchmark tests
       - benchmark_test:
-          to: "BasicWriteTest" 
+          test: "BasicWriteTest" 
       - benchmark_test:  
-          to: "LoginTest" 
+          test: "LoginTest" 
       - benchmark_test:
-          to: "LoginLogoutTest" 
+          test: "LoginLogoutTest" 
       - benchmark_test:
-          to:  "LoginGetRootLogoutTest" 
+          test:  "LoginGetRootLogoutTest" 
       - benchmark_test:
-          to:  "NamespaceTest" 
+          test:  "NamespaceTest" 
       - benchmark_test:
-          to: "NamespaceRegistryTest" 
+          test: "NamespaceRegistryTest" 
       - benchmark_test:
-          to: "ReadPropertyTest" 
+          test: "ReadPropertyTest" 
       - benchmark_test:
-          to: "GetNodeWithAdmin" 
+          test: "GetNodeWithAdmin" 
       - benchmark_test:
-          to: "GetNodeWithAnonymous" 
+          test: "GetNodeWithAnonymous" 
       - benchmark_test:
-          to: "GetDeepNodeTest" 
+          test: "GetDeepNodeTest" 
       - benchmark_test:
-          to: "SetPropertyTest" 
+          test: "SetPropertyTest" 
       - benchmark_test:
-          to: "SetMultiPropertyTest" 
+          test: "SetMultiPropertyTest" 
       - benchmark_test:
-          to: "SmallFileReadTest" 
+          test: "SmallFileReadTest" 
       - benchmark_test:
-          to: "SmallFileWriteTest" 
+          test: "SmallFileWriteTest" 
       - benchmark_test:
-          to: "ConcurrentReadTest" 
+          test: "ConcurrentReadTest" 
       - benchmark_test:
-          to: "ConcurrentReadWriteTest" 
+          test: "ConcurrentReadWriteTest" 
       - benchmark_test:
-          to: "ConcurrentWriteReadTest" 
+          test: "ConcurrentWriteReadTest" 
       - benchmark_test:
-          to: "ConcurrentWriteTest" 
+          test: "ConcurrentWriteTest" 
       - benchmark_test:
-          to: "SimpleSearchTest" 
+          test: "SimpleSearchTest" 
       - benchmark_test:
-          to: "UUIDLookupTest" 
+          test: "UUIDLookupTest" 
       - benchmark_test:
-          to: "SQL2SearchTest" 
+          test: "SQL2SearchTest" 
       - benchmark_test:
-          to: "DescendantSearchTest" 
+          test: "DescendantSearchTest" 
       - benchmark_test:
-          to: "SQL2DescendantSearchTest" 
+          test: "SQL2DescendantSearchTest" 
       - benchmark_test:
-          to: "FlatTreeUpdateTest" 
+          test: "FlatTreeUpdateTest" 
       - benchmark_test:
-          to: "CreateManyChildNodesTest" 
+          test: "CreateManyChildNodesTest" 
       - benchmark_test:
-          to: "CreateManyNodesTest" 
+          test: "CreateManyNodesTest" 
       - benchmark_test:
-          to: "UpdateManyChildNodesTest" 
+          test: "UpdateManyChildNodesTest" 
       - benchmark_test:
-          to: "TransientManyChildNodesTest" 
+          test: "TransientManyChildNodesTest" 
       - benchmark_test:
-          to: "WikipediaImport" 
+          test: "WikipediaImport" 
       - benchmark_test:
-          to: "ManyNodes" 
+          test: "ManyNodes" 
       - benchmark_test:
-          to: "ReadDeepTreeTest" 
+          test: "ReadDeepTreeTest" 
       - benchmark_test:
-          to: "ConcurrentReadDeepTreeTest" 
+          test: "ConcurrentReadDeepTreeTest" 
       - benchmark_test:
-          to: "ConcurrentReadRandomNodeAndItsPropertiesTest" 
+          test: "ConcurrentReadRandomNodeAndItsPropertiesTest" 
       - benchmark_test:
-          to: "ConcurrentTraversalTest" 
+          test: "ConcurrentTraversalTest" 
       - benchmark_test:
-          to: "ConcurrentCreateNodesTest" 
+          test: "ConcurrentCreateNodesTest" 
       - benchmark_test:
-          to: "SequentialCreateNodesTest" 
+          test: "SequentialCreateNodesTest" 
       - benchmark_test:
-          to: "ConcurrentFileWriteTest" 
+          test: "ConcurrentFileWriteTest" 
 
 
