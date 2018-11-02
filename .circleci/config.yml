@@ -9,7 +9,7 @@ commands:
     parameters:
       test:
         type: string
-        default: ""
+        default: "a"
     steps:
       - run: java -cp oak-benchmarks/target/oak-benchmarks-1.10-SNAPSHOT.jar org.apache.jackrabbit.oak.run.Main benchmark << parameters.test >>
 jobs:
@@ -50,78 +50,78 @@ jobs:
 
       # oak benchmark tests
       - benchmark_test:
-          to: BasicWriteTest 
+          to: "BasicWriteTest" 
       - benchmark_test:  
-          to: LoginTest 
+          to: "LoginTest" 
       - benchmark_test:
-          to: LoginLogoutTest 
+          to: "LoginLogoutTest" 
       - benchmark_test:
-          to:  LoginGetRootLogoutTest 
+          to:  "LoginGetRootLogoutTest" 
       - benchmark_test:
-          to:  NamespaceTest 
+          to:  "NamespaceTest" 
       - benchmark_test:
-          to: NamespaceRegistryTest 
+          to: "NamespaceRegistryTest" 
       - benchmark_test:
-          to: ReadPropertyTest 
+          to: "ReadPropertyTest" 
       - benchmark_test:
-          to: GetNodeWithAdmin 
+          to: "GetNodeWithAdmin" 
       - benchmark_test:
-          to: GetNodeWithAnonymous 
+          to: "GetNodeWithAnonymous" 
       - benchmark_test:
-          to: GetDeepNodeTest 
+          to: "GetDeepNodeTest" 
       - benchmark_test:
-          to: SetPropertyTest 
+          to: "SetPropertyTest" 
       - benchmark_test:
-          to: SetMultiPropertyTest 
+          to: "SetMultiPropertyTest" 
       - benchmark_test:
-          to: SmallFileReadTest 
+          to: "SmallFileReadTest" 
       - benchmark_test:
-          to: SmallFileWriteTest 
+          to: "SmallFileWriteTest" 
       - benchmark_test:
-          to: ConcurrentReadTest 
+          to: "ConcurrentReadTest" 
       - benchmark_test:
-          to: ConcurrentReadWriteTest 
+          to: "ConcurrentReadWriteTest" 
       - benchmark_test:
-          to: ConcurrentWriteReadTest 
+          to: "ConcurrentWriteReadTest" 
       - benchmark_test:
-          to: ConcurrentWriteTest 
+          to: "ConcurrentWriteTest" 
       - benchmark_test:
-          to: SimpleSearchTest 
+          to: "SimpleSearchTest" 
       - benchmark_test:
-          to: UUIDLookupTest 
+          to: "UUIDLookupTest" 
       - benchmark_test:
-          to: SQL2SearchTest 
+          to: "SQL2SearchTest" 
       - benchmark_test:
-          to: DescendantSearchTest 
+          to: "DescendantSearchTest" 
       - benchmark_test:
-          to: SQL2DescendantSearchTest 
+          to: "SQL2DescendantSearchTest" 
       - benchmark_test:
-          to: FlatTreeUpdateTest 
+          to: "FlatTreeUpdateTest" 
       - benchmark_test:
-          to: CreateManyChildNodesTest 
+          to: "CreateManyChildNodesTest" 
       - benchmark_test:
-          to: CreateManyNodesTest 
+          to: "CreateManyNodesTest" 
       - benchmark_test:
-          to: UpdateManyChildNodesTest 
+          to: "UpdateManyChildNodesTest" 
       - benchmark_test:
-          to: TransientManyChildNodesTest 
+          to: "TransientManyChildNodesTest" 
       - benchmark_test:
-          to: WikipediaImport 
+          to: "WikipediaImport" 
       - benchmark_test:
-          to: ManyNodes 
+          to: "ManyNodes" 
       - benchmark_test:
-          to: ReadDeepTreeTest 
+          to: "ReadDeepTreeTest" 
       - benchmark_test:
-          to: ConcurrentReadDeepTreeTest 
+          to: "ConcurrentReadDeepTreeTest" 
       - benchmark_test:
-          to: ConcurrentReadRandomNodeAndItsPropertiesTest 
+          to: "ConcurrentReadRandomNodeAndItsPropertiesTest" 
       - benchmark_test:
-          to: ConcurrentTraversalTest 
+          to: "ConcurrentTraversalTest" 
       - benchmark_test:
-          to: ConcurrentCreateNodesTest 
+          to: "ConcurrentCreateNodesTest" 
       - benchmark_test:
-          to: SequentialCreateNodesTest 
+          to: "SequentialCreateNodesTest" 
       - benchmark_test:
-          to: ConcurrentFileWriteTest
+          to: "ConcurrentFileWriteTest" 
 
 
