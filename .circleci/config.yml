@@ -11,7 +11,7 @@ commands:
         type: string
         default: "a"
     steps:
-      - run: java -cp oak-benchmarks/target/oak-benchmarks-1.10-SNAPSHOT.jar org.apache.jackrabbit.oak.run.Main benchmark << parameters.test >> Oak-Segment-Tar
+      - run: java -Xms256m -Xmx2048m -cp oak-benchmarks/target/oak-benchmarks-1.10-SNAPSHOT.jar org.apache.jackrabbit.oak.run.Main benchmark << parameters.test >> Oak-Segment-Tar
 jobs:
   build:
     docker:
